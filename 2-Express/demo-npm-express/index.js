@@ -26,12 +26,32 @@
 const express = require('express');
 const app = express();
 
-app.get('/user/:id', (req, res) => {
-    console.log(req.params);
-    const idParam = req.params;
-    console.log(idParam.id);
-    res.send('Welcome to my website');
-});
+const teacherRouter = require('./teacher');
+const studentRouter = require('./students');
+
+app.use('/teacher', teacherRouter);
+app.use('/student', studentRouter);
+// const students = [
+//     {name: 'Nguyen Tuan Anh', age: 10},
+//     {name: 'Luong Tran', age: 14},
+//     {name: 'Le Tien Dung', age: 15},
+// ];
+
+// app.get('/user/:id', (req, res) => {
+//     console.log(req.params);
+//     const idParam = req.params;
+//     console.log(idParam.id);
+//     res.send('Welcome to my website');
+// });
+//
+// app.get('/students', (req, res) => {
+//     res.json(students);
+// });
+//
+// app.get('/students/add', (req, res) => {
+//     students.push({ name: 'Bui Thanh Phong', age: 30 });
+//     res.json(students);
+// });
 
 const port = 3000;
 
