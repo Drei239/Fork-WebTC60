@@ -62,6 +62,13 @@ router.put('/:id', (req, res) => {
 
 // Viet 1 endpoint http://localhost:3000/books/:id (DELETE)
 // Xóa 1 quyển sách dựa vào ID -> Check ID tồn tại thì xóa, không thì báo lỗi
+router.delete("/books/:id", (req, res) => {
+    const book = books.find(b => b.id === parseInt(req.params.id));
+    if (!book) res.status(404).send("The book with the given ID was not found.");
+    const index = books.indexOf(book);
+    books.splice(index, 1);
+    res.send(book);
+});
 
 // Ket hop them 1 vai kien thuc khac - Su dung joi de validate data dau vao
 // Handle cac case loi
