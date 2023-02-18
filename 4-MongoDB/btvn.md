@@ -17,3 +17,8 @@ result:
 2. Tìm 1 quyển sách theo _id
 3. Thêm 1 quyển sách mới (insert toàn bộ thông tin)
 4. Tìm 1 quyển sách có lớn hơn 400 trang và đúng 2 thể loại
+5. Update thông tin của quyển sách có title là "One Hundred Years Of Solitude"
+- publisher_date
+- genres
+- Publisher
+6. Delete những quyển sách xuất bản trước năm 1967
