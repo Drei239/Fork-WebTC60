@@ -1,0 +1,8 @@
+- B1: Hiển thị danh sách các user github flowing
+    - Sử dụng API của github: https://api.github.com/users/anhtbok92/followers
+    - Sử dụng antd design (hoặc bộ design system khác mà anh đã giới thiệu)
+    - Sử dụng func hoặc class Component
+- B2
+  - Viết bài tập counter - sử dụng fun component.
+- B3
+  - Làm slide về useEffect - so sánh với class component
